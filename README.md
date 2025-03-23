@@ -14,26 +14,6 @@ my-website-project
 └── README.md
 ```
 
-## Getting Started
-
-To get started with this project, follow these steps:
-
-1. **Clone the repository** (if applicable):
-   ```
-   git clone <repository-url>
-   ```
-
-2. **Navigate to the project directory**:
-   ```
-   cd my-website-project
-   ```
-
-3. **Open the HTML file**:
-   Open `src/html/index.html` in your web browser to view the website.
-
-4. **Edit the CSS**:
-   Modify `src/css/styles.css` to change the appearance of the website as needed.
-
 ## Technologies Used
 
 - HTML
