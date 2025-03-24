@@ -19,6 +19,10 @@ nav {
     margin: 20px 0;
 }
 
+main.padded {
+    padding-bottom: 1000px; /* Adjust the value as needed */
+}
+
 nav a {
     color: #ffffff;
     text-decoration: none;
