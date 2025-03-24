@@ -2,6 +2,11 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 header {
@@ -9,6 +14,7 @@ header {
     color: #ffffff;
     padding: 10px 0;
     text-align: center;
+    width: 100%;
 }
 
 h1 {
@@ -20,7 +26,16 @@ nav {
 }
 
 main.padded {
-    padding-bottom: 1000px; /* Adjust the value as needed */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main.padded p {
+    font-size: 3em; /* Adjust the size as needed */
+    margin: 0;
 }
 
 nav a {
