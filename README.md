@@ -1,4 +1,4 @@
-# My Website Project
+# RONNIERUCKER.COM
 
 This project is a simple website that consists of HTML and CSS files. Below are the instructions on how to set up and run the website.
 
