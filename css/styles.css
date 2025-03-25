@@ -12,9 +12,10 @@ body {
 header {
     background: #35424a;
     color: #ffffff;
-    padding: 10px 0;
+    padding: 15px 0;
     text-align: center;
     width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
@@ -22,7 +23,39 @@ h1 {
 }
 
 nav {
-    margin: 20px 0;
+    background: #35424a;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 0px;
+}
+
+nav ul li a {
+    background: #35424a; /* Set the background color to match the header */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 5px 20px;
+    display: block;
+    border: 1px solid #ffffff; /* Add a white border around each menu item */
+    border-top-left-radius: 10px; /* Round the top-left corner */
+    border-top-right-radius: 10px; /* Round the top-right corner */
+    border-bottom-left-radius: 0; /* Keep the bottom-left corner flat */
+    border-bottom-right-radius: 0; /* Keep the bottom-right corner flat */
+}
+
+nav ul li a:hover {
+    background: #575757;
+    border-radius: 5px;
 }
 
 main.padded {
@@ -36,6 +69,14 @@ main.padded {
 main.padded p {
     font-size: 3em; /* Adjust the size as needed */
     margin: 0;
+}
+
+main.padded img {
+    position: absolute;
+    top: 120px; /* Adjust the position as needed */
+    left: 20px; /* Adjust the position as needed */
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
 }
 
 nav a {
