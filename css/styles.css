@@ -104,3 +104,43 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Media Queries for Responsive Design */
+
+/* Styles for devices with a max width of 768px (e.g., tablets and mobile devices) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Adjust the spacing between menu items */
+    }
+
+    main.padded p {
+        font-size: 2em; /* Adjust the font size for smaller screens */
+    }
+
+    main.padded img {
+        top: 50px; /* Adjust the position for smaller screens */
+        left: 10px; /* Adjust the position for smaller screens */
+        width: 150px; /* Adjust the size for smaller screens */
+    }
+}
+
+/* Styles for devices with a max width of 480px (e.g., small mobile devices) */
+@media (max-width: 480px) {
+    nav ul li a {
+        padding: 10px 15px; /* Adjust the padding for smaller screens */
+    }
+
+    main.padded p {
+        font-size: 1.5em; /* Adjust the font size for smaller screens */
+    }
+
+    main.padded img {
+        top: 30px; /* Adjust the position for smaller screens */
+        left: 5px; /* Adjust the position for smaller screens */
+        width: 100px; /* Adjust the size for smaller screens */
+    }
+}
