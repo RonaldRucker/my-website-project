@@ -1,12 +1,24 @@
 body {
-    margin: 0;
+    /* margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    height: 100%;
+}
+
+/* Wrapper for Flexbox Layout */
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure the layout fills the full height of the viewport */
 }
 
 header {
@@ -14,18 +26,14 @@ header {
     color: #ffffff;
     padding: 15px 0;
     text-align: center;
-    width: 100%;
-    box-sizing: border-box;
-}
-
-h1 {
-    margin: 0;
+    /* width: 100%;
+    box-sizing: border-box; */
 }
 
 nav {
     background: #35424a;
-    width: 100%;
-    box-sizing: border-box;
+    /* width: 100%;
+    box-sizing: border-box; */
 }
 
 nav ul {
@@ -58,6 +66,16 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
+main {
+    flex: 1; /* Allow main to grow and fill the available space */
+    padding: 20px;
+    background: #ffffff;
+    /* text-align: center; */
+    position: relative; /* Set position relative for absolute positioning of child elements */
+}
+
+
+
 main.padded {
     flex: 1;
     display: flex;
@@ -66,10 +84,10 @@ main.padded {
     text-align: center;
 }
 
-main.padded p {
-    font-size: 3em; /* Adjust the size as needed */
+ main.padded p {
+    font-size: 3em; 
     margin: 0;
-}
+} 
 
 main.padded img {
     position: absolute;
