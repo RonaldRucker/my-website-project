@@ -22,13 +22,16 @@ body {
 }
 
 .header {
-    padding-top: 10px;
+    padding-top: 0;
+    margin: 0;
     background: #35424a;
     color: #ffffff;
     padding: 0px 0;
     /* text-align: center; */
     width: 100%;
     box-sizing: border-box;
+    position: fixed; /* Fix the header to the top */
+    top: 0; /* Position it at the top */
 }
 
 .inner-header {
@@ -63,6 +66,7 @@ h2 {
     font-weight: 100;
     font-family: "Poppins", sans-serif;
 }
+
 p {
     color: #040303;
     font-size: 1rem;
@@ -86,14 +90,14 @@ h1 span2 {
     color: #ffffff; /* Dark color for contrast */
 }
 
-nav {
+.navbar {
     background: #35424a;
     /* float: right; */
     padding-bottom: px;
     align-items: center;
 }
 
-nav ul {
+.navbar ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -101,19 +105,19 @@ nav ul {
     justify-content: flex-end;
 }
 
-nav ul li {
+.navbar ul li {
     margin: 0 0px;
 }
 
-nav ul li a {
-    background: #35424a; /* Set the background color to match the header */
+.navbar ul li a {
+    background: #35424a; 
     color: #ffffff;
     text-decoration: none;
     padding: 5px 20px;
     display: block;
 }
 
-nav ul li a:hover {
+.navbar ul li a:hover {
     background: #575757;
     border-radius: 10px;
 }
@@ -134,7 +138,7 @@ main.padded {
     text-align: center;
 }
 
- main.padded p {
+main.padded p {
     font-size: 3em; 
     margin: 0;
 } 
@@ -147,7 +151,7 @@ main.padded img {
     height: auto;
 }
 
-nav a {
+.navbar a {
     color: #ffffff;
     text-decoration: none;
     padding: 10px 15px;
@@ -159,21 +163,27 @@ nav a {
     overflow: hidden;
 }
 
-footer {
+.list li {
+    color: #040303;
+}
+
+.foot {
     text-align: center;
     padding: 20px 0;
-    background: #35424a;
+    background: #ccdde8;
     color: #ffffff;
     position: relative;
     bottom: 0;
     width: 100%;
 }
 
+
+
 /* Media Queries for Responsive Design */
 
 /* Styles for devices with a max width of 768px (e.g., tablets and mobile devices) */
 @media (max-width: 768px) {
-    nav ul {
+    .navbar ul {
         display: flex;
         flex-direction: row; /*Stack menu items vertically*/
         padding-bottom: 1px;
@@ -189,7 +199,7 @@ footer {
         float: right;
     }
 
-    nav ul li {
+    .navbar ul li {
         margin: 0; /* Adjust the spacing between menu items */
     }
 
