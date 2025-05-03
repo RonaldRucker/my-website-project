@@ -53,17 +53,23 @@ header {
 .name {
     color: #ffffff;
     text-decoration: none;
-    padding: 10px 15px;
-    border: 2px solid #ffffff;
+    /* padding: px; */
+    /* border: 2px solid #ffffff; */
     border-radius: 5px;
     display: inline-block;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
+    justify-content: left;
 }
 
 .name:hover {
-    background-color: #ffffff;
+    /* background-color: #ffffff; */
     color: #35424a;
+}
+
+.name nav a {
+    list-style: none;
+    text-decoration: none;
 }
 /* blocked out for now to try something out */
 
