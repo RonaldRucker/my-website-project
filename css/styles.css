@@ -6,6 +6,20 @@ body {
     height: 100%;
 }
 
+.proj {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    justify-content: center"
+}
+
+section {
+    padding: 10px;
+    background: #f4f4f4;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
 /* Wrapper for Flexbox Layout */
 .wrapper {
     display: flex;
@@ -24,6 +38,8 @@ header {
     width: 100%;
     /* box-sizing: border-box; */
     top: 0; /* Position it at the top */
+    position: sticky;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 .inner-header {
@@ -163,7 +179,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     background: #35424a;
-    position: fixed; /* Fix the footer to the bottom */
+    /* position: fixed; */
     bottom: 0;
     width: 100%;
 }
