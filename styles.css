@@ -10,7 +10,10 @@ body {
     display: flex; 
     flex-wrap: wrap; 
     gap: 10px; 
-    justify-content: center"
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    /* padding: 20px; */
 }
 
 section {
@@ -53,7 +56,7 @@ header {
 .name {
     color: #ffffff;
     text-decoration: none;
-    /* padding: px; */
+    padding: 0px 10px;
     /* border: 2px solid #ffffff; */
     border-radius: 5px;
     display: inline-block;
@@ -244,5 +247,14 @@ footer p {
         top: 30px; /* Adjust the position for smaller screens */
         left: 5px; /* Adjust the position for smaller screens */
         width: 100px; /* Adjust the size for smaller screens */
+    }
+
+    .proj img { 
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        /* min-width: 100%; */
+        gap: 5px; /* Adjust the gap between items */
+        width: 49%; 
+        height: auto
     }
 }
