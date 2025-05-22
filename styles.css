@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth ;
     scroll-padding-top: 100px;
 }
 
@@ -84,11 +84,29 @@ a {
 .hero .hero-content {
     width: 75%;
     position: sticky;
-    top: 90px;
+    top: 120px;
+
 }
 
 /* Body */
 .about .container {
+    margin: 50px 0 500px;
+    padding: 0 15px;
+}
+
+.resume .container {
+    max-width: 50%;
+    margin: 50px auto 10px;
+
+}
+.resume .container .resume-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.contact .container {
     margin: 50px 0 500px;
     padding: 0 15px;
 }
