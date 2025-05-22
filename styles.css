@@ -4,6 +4,11 @@
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
 :root {
     --primary-color: #2a68c4;
     --dark-color: #111;
@@ -11,6 +16,13 @@
     --secondary-color: #35424a;
     --text-color: #333;
     --background-color: #f4f4f4;
+}
+
+header {
+    position: sticky;
+    z-index: 1000;
+    top: 0;
+    height: 80px;
 }
 
 body {
@@ -60,6 +72,27 @@ a {
     color: var(--primary-color);
 }
 
+/* Hero */
+.hero {
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fG1vYmlsZXxlbnwwfHx8fDE2ODQ5NTI3MjA&ixlib=rb-4.0.3&q=80&w=1080') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.hero .hero-content {
+    width: 75%;
+    position: sticky;
+    top: 90px;
+}
+
+/* Body */
+.about .container {
+    margin: 50px 0 500px;
+    padding: 0 15px;
+}
+
 /* Utility classes */
 .container {
     max-width: 1100px;
@@ -92,22 +125,14 @@ a {
     margin: 0 auto;
 }
 
-section {
+/* section {
     padding: 10px;
     background: #f4f4f4;
     margin: 10px 0;
     border-radius: 5px;
-}
+} */
 
-h1 {
-    color: #333;
-    font-size: 2rem;
-    /* margin: 0;
-    padding: 0; */
-    font-weight: 100;
-}
-
-h2 {
+.name a {
     color: #040303;
     font-size: 1.5rem;
     /* margin: 0;
@@ -115,8 +140,8 @@ h2 {
     font-weight: 100;
 }
 
-h1 span2 {
-    font-weight: 900;
+.name a span {
+    font-weight: 100;
 }
 
 footer {
@@ -133,6 +158,47 @@ footer p {
     padding: 0;
     font-size: 1rem;
     color: #ffffff;
+}
+
+/* Text classes */
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 5px 0 10px;
+}
+
+.text-center {
+    text-align: center;
 }
 
 
