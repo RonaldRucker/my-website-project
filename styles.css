@@ -29,7 +29,6 @@ body {
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
-    background: #fff;
 }
 
 ul {
@@ -85,25 +84,34 @@ a {
     width: 75%;
     position: sticky;
     top: 120px;
-
 }
 
 /* Body */
 .about .container {
     margin: 50px 0 500px;
     padding: 0 15px;
+    color: var(--dark-color)
+}
+
+.projects {
+    margin: 50px 0 250px;
+    padding: 0px 15px;
+}
+
+.projects .container {
+    
+    background: #646464;
+    color: var(--light-color)
 }
 
 .resume .container {
     max-width: 50%;
-    margin: 50px auto 10px;
-
+    margin: 5px auto 10px;
 }
 .resume .container .resume-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .contact .container {
