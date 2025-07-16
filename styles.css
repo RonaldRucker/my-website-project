@@ -59,9 +59,6 @@ a {
 
 .navbar .main-menu ul {
     display: flex;
-    margin: 0;
-    padding: 0;
-    list-style: none;
 }
 
 .navbar ul li a {
@@ -69,21 +66,86 @@ a {
     display: block;
     font-weight: 600;
     transition: .5s;
-    text-decoration: none;
-    color: #333;
 }
 
 .navbar ul li a:hover {
     color: var(--primary-color);
 }
 
-.bar {
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    background-color: #000;
-    transition: all 0.3s ease;
+/* Mobile Menu Styles */
+.nav-menu {
+    display: block; /* Always visible on desktop */
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-toggle {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -80%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        padding: 80px 20px 20px;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin: 15px 0;
+    }
+
+    .nav-menu ul li a {
+        font-size: 1.2rem;
+        color: #333;
+        text-decoration: none;
+        padding: 10px 20px;
+        transition: background 0.7s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        background: rgba(0,0,0,0.05);
+        border-radius: 4px;
+    }
+
+    /* Prevent scrolling when menu open */
+    body.menu-open {
+        overflow: hidden;
+    }
 }
 
 /* Hero */
