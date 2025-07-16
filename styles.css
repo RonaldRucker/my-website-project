@@ -12,8 +12,8 @@ html {
 :root {
     --primary-color: #2a68c4;
     --dark-color: #111;
-    --light-color: #f4f4f6;
-    --secondary-color: #35424a;
+    --light-color: #f4f4f6; /*name and hamburger*/
+    --secondary-color: #35424a;/*navbar heading*/
     --text-color: #333;
     --background-color: #f4f4f4;
 }
@@ -42,12 +42,12 @@ img {
 
 a {
     text-decoration: none;
-    color: #333;
+    color: var(--light-color);
 }
 
 /* Navbar */
 .navbar {
-    background: #fff;
+    background: var(--secondary-color);
     padding: 20px;
 }
 
@@ -90,7 +90,7 @@ a {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: #333;
+    color: var(--light-color);
     transition: color 0.3s ease;
 }
 
@@ -184,7 +184,7 @@ a {
 }  
 
 .name a {
-    color: #040303;
+    color: var(--light-color);
     font-size: 1.5rem;
     font-weight: 100;
     text-decoration: none;
@@ -305,7 +305,7 @@ footer p {
 
 .carousel-slide h3 {
     color: var(--light-color);
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
     text-align: center;
 }
@@ -350,7 +350,7 @@ footer p {
         border: none;
         font-size: 2rem;
         cursor: pointer;
-        color: #333;
+        color: var(--light-color);
         z-index: 1100;
     }
 }
