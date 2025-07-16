@@ -98,56 +98,6 @@ a {
     color: var(--primary-color);
 }
 
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    .nav-menu {
-        position: fixed;
-        top: 0;
-        right: -80%;
-        width: 80%;
-        height: 100vh;
-        background: #fff;
-        padding: 80px 20px 20px;
-        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
-        transition: right 0.3s ease-in-out;
-        z-index: 1000;
-    }
-
-    .nav-menu.active {
-        right: 0;
-    }
-
-    .nav-menu ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .nav-menu ul li {
-        margin: 15px 0;
-    }
-
-    .nav-menu ul li a {
-        font-size: 1.2rem;
-        color: #333;
-        text-decoration: none;
-        padding: 10px 20px;
-        transition: background 0.7s ease;
-    }
-
-    .nav-menu ul li a:hover {
-        background: rgba(0,0,0,0.05);
-        border-radius: 4px;
-    }
-
-    /* Prevent scrolling when menu open */
-    body.menu-open {
-        overflow: hidden;
-    }
-}
-
 /* Hero */
 .hero {
     background: url('./images/Windows-XP.jpg') no-repeat center center/cover;
@@ -233,16 +183,6 @@ a {
     padding: 0 15px;
 }  
 
-.container .main-menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container .name {
-    max-width: 100%;
-}
-
 .name a {
     color: #040303;
     font-size: 1.5rem;
@@ -267,13 +207,6 @@ a {
     align-items: center;
     margin: 0 auto;
 }
-
-/* section {
-    padding: 10px;
-    background: #f4f4f4;
-    margin: 10px 0;
-    border-radius: 5px;
-} */
 
 footer {
     text-align: center;
@@ -405,13 +338,6 @@ footer p {
     background: var(--light-color);
 }
 
-/* Media Queries for Responsive Design */
-/* Hide the hamburger/menu-toggle button on large screens */
-.menu-toggle,
-.hamburger {
-    display: none;
-}
-
 /* Show the menu-toggle button only on screens 768px and below */
 @media (max-width: 768px) {
     .menu-toggle,
@@ -429,89 +355,39 @@ footer p {
     }
 }
 
-
-/* Styles for devices with a max width of 480px (e.g., small mobile devices) */
-@media (max-width: 480px) {
-    nav ul li a {
-        padding: 0px px; /* Adjust the padding for smaller screens */
-    }
-
-    main.padded p {
-        font-size: 1.5em; /* Adjust the font size for smaller screens */
-    }
-
-    main.padded img {
-        top: 30px; /* Adjust the position for smaller screens */
-        left: 5px; /* Adjust the position for smaller screens */
-        width: 100px; /* Adjust the size for smaller screens */
-    }
-
-    .proj img { 
-        flex-direction: column; /* Stack items vertically */
-        align-items: center; /* Center items */
-        /* min-width: 100%; */
-        gap: 5px; /* Adjust the gap between items */
-        width: 49%; 
-        height: auto
-    }
-}
-
-/* Override Bootstrap's default styles to maintain your design */
-.navbar-toggler {
-    display: none;
-    border: none;
-    padding: 0.5rem;
-}
-
-.navbar-toggler:focus {
-    box-shadow: none;
-}
-
-.navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-}
-
-/* Mobile styles */
 @media (max-width: 768px) {
-    .navbar-toggler {
+    .menu-toggle {
         display: block;
     }
 
-    .navbar .main-menu {
-        display: none !important;
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -80%;
+        width: 80%;
+        height: 100vh;
+        background: #fff;
+        padding: 80px 20px 20px;
+        box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
     }
 
-    .navbar .main-menu.show {
-        display: block !important;
+    .nav-menu.active {
+        right: 0;
     }
 
-    .navbar .main-menu ul {
+    .nav-menu ul {
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
     }
 
-    .navbar ul li {
-        width: 100%;
-        text-align: center;
+    .nav-menu ul li {
+        margin: 15px 0;
     }
 
-    .navbar ul li a {
-        padding: 0.8rem 2rem;
-    }
-
-    .navbar ul li a:hover {
-        background-color: rgba(42, 104, 196, 0.1);
-    }
-
-    /* Ensure the collapsed menu appears below the header */
-    .navbar .navbar-collapse {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: white;
-        padding: 1rem;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Prevent scrolling when menu open */
+    body.menu-open {
+        overflow: hidden;
     }
 }
