@@ -12,7 +12,7 @@
         }
 
         html {
-            scroll-padding-top: 25px;
+            scroll-behavior: smooth;
         }
 
         body {
@@ -156,12 +156,10 @@
 
         /* Hero Section */
         .hero {
-            position: sticky;
-            top: 0;
-            left: 0;
+            position: relative;
             width: 100vw;
             height: 100vh;
-            z-index: -2;
+            z-index: 0; /* Adjusted to prevent overlap issues */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -438,7 +436,7 @@
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 1rem;
         }
 
         .contact-info h3 {
@@ -619,7 +617,7 @@
     <!-- Header -->
     <header>
         <nav class="container">
-            <div class="logo">Ronnie Rucker</div>
+            <div class="logo"><a href="#home" style="text-decoration: none; color: inherit;">Ronnie Rucker</a></div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -663,9 +661,9 @@
                     <img src="./images/ronnie.jpg" alt="Ronnie Rucker" style="width:100%; height:100%; border-radius:50%; object-fit:cover;">
                 </div>
                 <div class="about-text">
-                    <p>I'm a passionate full-stack developer with a love for creating innovative digital solutions. With expertise in modern web technologies, I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing knowledge with the developer community. I believe in continuous learning and staying up-to-date with the latest industry trends.</p>
-                    <p>I'm always excited to take on new challenges and collaborate with like-minded individuals to create something amazing together.</p>
+                    <p>I'm an engineer and entrepreneur with an creative mindset and a love for innovation.</p>
+                    <p>I’m passionate about both the stock market and artificial intelligence, and I’m constantly finding new ways to combine them through projects and tools I build.</p>
+                    <p>My vision is to help underserved communities access complex markets using AI, spreading financial literacy and bridging the wealth gap</p>
                 </div>
             </div>
         </div>
@@ -679,22 +677,24 @@
                 <div class="skill-card">
                     <div class="skill-icon">🌐</div>
                     <h3>Frontend Development</h3>
-                    <p>React, Vue.js, JavaScript, TypeScript, HTML5, CSS3, Tailwind CSS</p>
+                    <p>Python, React, JavaScript, TypeScript, HTML5, CSS3</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend Development</h3>
-                    <p>Node.js, Python, Express.js, REST APIs, GraphQL, Microservices</p>
+                    <div class="skill-icon">📈</div>
+                    <h3>Stock Market Analysis</h3>
+                    <p>6+ years of trading experience</p>
+                    <p>Stocks, Options, Futures, Crytpo</p>
+
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Database & Cloud</h3>
-                    <p>MongoDB, PostgreSQL, MySQL, AWS, Docker, Kubernetes</p>
+                    <div class="skill-icon">⚡️</div>
+                    <h3>Electrical Engineer</h3>
+                    <p>Aerospace - Design Engineer</p>
                 </div>
                 <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Design & UX</h3>
-                    <p>Figma, Adobe XD, UI/UX Design, Responsive Design, Prototyping</p>
+                    <div class="skill-icon">💼</div>
+                    <h3>Entrepreneur</h3>
+                    <p>Founder of The Pit, LLC</p>
                 </div>
             </div>
         </div>
@@ -775,24 +775,20 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <h3>Let's Connect</h3>
-                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
                     <div class="contact-item">
                         <span>📧</span>
-                        <span>your.email@example.com</span>
-                    </div>
-                    <div class="contact-item">
-                        <span>📱</span>
-                        <span>+1 (555) 123-4567</span>
+                        <span>ronnie@getthepit.com</span>
                     </div>
                     <div class="contact-item">
                         <span>📍</span>
-                        <span>Your City, Country</span>
+                        <span>Seattle, WA</span>
                     </div>
                     <div class="contact-item">
                         <span>💼</span>
-                        <span>linkedin.com/in/yourprofile</span>
+                        <span>linkedin.com/in/ronaldrucker</span>
                     </div>
                 </div>
+                <p> Reach out if you need anything at all!</p>
                 <form class="contact-form">
                     <div class="form-group">
                         <label for="name">Name</label>
@@ -808,7 +804,7 @@
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+                        <textarea id="message" name="message" rows="5" placeholder="Ask me anything..." required></textarea>
                     </div>
                     <button type="submit" class="submit-btn">Send Message</button>
                 </form>
