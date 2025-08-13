@@ -943,6 +943,24 @@
         const track = document.getElementById('carouselTrack');
         const prevBtn = document.getElementById('prevBtn');
         const nextBtn = document.getElementById('nextBtn');
+        let autoplayDelay = 12000; // ms
+        let autoplayTimer = null;
+
+        function stopAutoplay() {
+            if (autoplayTimer !== null) {
+                clearInterval(autoplayTimer);
+                autoplayTimer = null;
+            }
+        }
+
+        function startAutoplay() {
+            stopAutoplay();
+            autoplayTimer = setInterval(nextSlide, autoplayDelay);
+        }
+
+        function restartAutoplay() {
+            startAutoplay();
+        }
 
         function updateCarousel() {
             track.style.transform = `translateX(-${currentSlide * 100}%)`;
@@ -969,24 +987,56 @@
         }
 
         // Event listeners for carousel
-        nextBtn.addEventListener('click', nextSlide);
-        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            restartAutoplay();
+        });
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            restartAutoplay();
+        });
 
         // Dot navigation for carousel
         dots.forEach((dot, index) => {
             dot.addEventListener('click', () => {
                 currentSlide = index;
                 updateCarousel();
+                restartAutoplay();
             });
         });
 
+        // Pause on hover/touch and resume when user stops interacting
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', stopAutoplay);
+            carouselContainer.addEventListener('mouseleave', startAutoplay);
+            carouselContainer.addEventListener('touchstart', stopAutoplay, { passive: true });
+            carouselContainer.addEventListener('touchend', startAutoplay, { passive: true });
+        }
+
+        // Pause when tab not visible
+        document.addEventListener('visibilitychange', () => {
+            if (document.hidden) {
+                stopAutoplay();
+            } else {
+                startAutoplay();
+            }
+        });
+
         // Auto-play carousel
-       // setInterval(nextSlide, 10000);
+        // Start controlled autoplay
+        startAutoplay();
 
         // Keyboard navigation for carousel
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') prevSlide();
-            if (e.key === 'ArrowRight') nextSlide();
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+                restartAutoplay();
+            }
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+                restartAutoplay();
+            }
         });
 
         // Mobile Navigation Logic
