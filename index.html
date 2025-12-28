@@ -120,6 +120,18 @@
             transition: all 0.3s ease;
         }
 
+        .hamburger-menu.active .hamburger-line:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 4px);
+        }
+
+        .hamburger-menu.active .hamburger-line:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger-menu.active .hamburger-line:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -4px);
+        }
+
         /* Mobile Navigation Menu */
         .mobile-nav {
             position: fixed;
@@ -746,21 +758,23 @@
                     <h3>Frontend Development</h3>
                     <p>Python, React, JavaScript, TypeScript, HTML5, CSS3</p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">📈</div>
                     <h3>Stock Market Analysis</h3>
                     <p>6+ years of trading experience</p>
                     <p>Stocks, Options, Futures, Crytpo</p>
-
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">⚡️</div>
                     <h3>Electrical Engineer</h3>
-                    <p>Aerospace - Design Engineer</p>
+                    <p>Aerospace Design Engineer</p>
                 </div>
+
                 <div class="skill-card">
                     <div class="skill-icon">💼</div>
-                    <h3>Entrepreneur</h3>
+                    <h3>Entrepreneurship</h3>
                     <p>Founder of The Pit, LLC</p>
                 </div>
             </div>
@@ -774,38 +788,8 @@
         <div class="carousel-container">
             <div class="carousel-wrapper">
                 <div class="carousel-track" id="carouselTrack">
+
                     <div class="carousel-slide active">
-                        <div class="project-showcase">
-                            <div class="project-image">📊</div>
-                            <div class="project-info">
-                                <h3>The Pit Technology, LLC</h3>
-                                <p>Fintech startup created to bridge the wealth gap. This company spreads financial literacy using a combination of AI and PhD researh to make learning faster and easier.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Python</span>
-                                    <span class="tech-tag">API</span>
-                                    <span class="tech-tag">Supabase</span>
-                                    <span class="tech-tag">AI</span>
-                                </div>
-                                <!-- <a href="projects.html" class="learn-more-btn">Learn More</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
-                        <div class="project-showcase">
-                            <div class="project-image">📱</div>
-                            <div class="project-info">
-                                <h3>Webpage Portfolio</h3>
-                                <p>This website explains itself, I built this webpage from scratch as a fun and creative way to showcase my skills and experience.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">HTML5</span>
-                                    <span class="tech-tag">CSS</span>
-                                    <span class="tech-tag">JavaScript</span>
-                                </div>
-                                <!-- <a href="projects.html" class="learn-more-btn">Learn More</a> -->
-                            </div>
-                        </div>
-                    </div>
-                    <div class="carousel-slide">
                         <div class="project-showcase">
                             <div class="project-image">🚀</div>
                             <div class="project-info">
@@ -821,6 +805,40 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="carousel-slide">
+                        <div class="project-showcase">
+                            <div class="project-image">📊</div>
+                            <div class="project-info">
+                                <h3>The Pit Technology, LLC</h3>
+                                <p>Fintech startup created to bridge the wealth gap. This company spreads financial literacy using a combination of AI and PhD researh to make learning faster and easier.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">API</span>
+                                    <span class="tech-tag">Supabase</span>
+                                    <span class="tech-tag">AI</span>
+                                </div>
+                                <!-- <a href="projects.html" class="learn-more-btn">Learn More</a> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="carousel-slide">
+                        <div class="project-showcase">
+                            <div class="project-image">📱</div>
+                            <div class="project-info">
+                                <h3>Webpage Portfolio</h3>
+                                <p>This website explains itself, I built this webpage from scratch as a fun and creative way to showcase my skills and experience.</p>
+                                <div class="project-tech">
+                                    <span class="tech-tag">HTML5</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <!-- <a href="projects.html" class="learn-more-btn">Learn More</a> -->
+                            </div>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <button class="carousel-btn prev" id="prevBtn">❮</button>
