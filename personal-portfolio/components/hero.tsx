@@ -73,7 +73,7 @@ export function Hero() {
   const tickerItems = [...ticker, ...ticker]
 
   return (
-    <section className="relative min-h-screen flex flex-col overflow-hidden maker-grid">
+    <section className="relative min-h-dvh flex flex-col overflow-hidden maker-grid">
       {/* Accent glow */}
       <div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-10 blur-[120px] pointer-events-none"
