@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Wrench, Printer, Cpu, Code2, Globe, Music } from 'lucide-react'
 
 const hobbies = [
@@ -80,10 +81,14 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
         {/* Bio column */}
         <div className="lg:col-span-2 flex flex-col gap-6">
-          {/* Avatar placeholder */}
-          <div className="relative size-24 rounded-lg overflow-hidden border border-border bg-card flex items-center justify-center">
-            <span className="font-mono font-bold text-3xl text-primary">R</span>
-            <div className="absolute inset-0 bg-primary/5" />
+          {/* Avatar */}
+          <div className="relative size-24 rounded-lg overflow-hidden border border-border">
+            <Image
+              src="/images/ronnie.jpg"
+              alt="Ronnie Rucker"
+              fill
+              className="object-cover object-top"
+            />
           </div>
 
           <div className="space-y-4">
