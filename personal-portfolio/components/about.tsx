@@ -81,8 +81,8 @@ export function About() {
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
         {/* Bio column */}
         <div className="lg:col-span-2 flex flex-col gap-6">
-          {/* Avatar */}
-          <div className="relative size-24 rounded-lg overflow-hidden border border-border">
+          {/* Photo */}
+          <div className="relative w-full h-72 sm:h-80 rounded-lg overflow-hidden border border-border">
             <Image
               src="/images/ronnie.jpg"
               alt="Ronnie Rucker"
@@ -96,20 +96,27 @@ export function About() {
               Ronnie Rucker
             </h3>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              I&apos;m a maker, hobbyist, and perpetual tinkerer who believes the
-              best way to understand something is to take it apart — or build
-              one from scratch.
+              I&apos;m a software developer, derivatives trader, and aerospace
+              engineer — someone who finds the most interesting problems at the
+              intersection of disciplines. I&apos;ve built several businesses to add
+              value to industries I care about, from democratizing options and
+              futures trading to freelance services for small businesses. Along
+              the way I&apos;ve written arbitrage engines in Rust, designed custom
+              PCBs and AI models, and 3D printed industrial-grade parts for
+              manufacturing.
             </p>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              By day I wrangle code. By night I&apos;m in the garage with a
-              soldering iron in one hand and a cup of coffee in the other,
-              wondering if this resistor is actually 10kΩ or if I grabbed the
-              wrong one again.
+              By day I work as a software developer and electrical engineer in
+              aerospace, designing electrical networks and autonomous systems.
+              Outside of that I&apos;m trading derivatives, building fintech tools,
+              and running whatever project has my attention — whether that&apos;s a
+              CNC-machined drone test rig or a fully local AI assistant running
+              on bare metal.
             </p>
             <p className="text-muted-foreground leading-relaxed text-sm">
-              This portfolio is my build log — a place to document the
-              projects, share the lessons, and show off the things that
-              actually worked (and a few that didn&apos;t).
+              This portfolio is a snapshot of what I&apos;ve shipped. Some of it is
+              still in progress, some of it runs in production, and all of it
+              was built to solve a real problem.
             </p>
           </div>
 
