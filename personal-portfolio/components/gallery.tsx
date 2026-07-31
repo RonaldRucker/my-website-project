@@ -64,7 +64,7 @@ export function Gallery() {
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
         <div>
           <p className="font-mono text-xs text-primary uppercase tracking-widest mb-2">
-            // 03 — GALLERY
+            // 05 — GALLERY
           </p>
           <h2 className="font-sans font-bold text-4xl sm:text-5xl text-foreground text-balance">
             The Build Wall

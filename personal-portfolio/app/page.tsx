@@ -12,13 +12,13 @@ export default function Home() {
     <main>
       <Nav />
       <Hero />
+      <About />
+      <Separator className="opacity-30" />
       <Projects />
       <Separator className="opacity-30" />
       <Blog />
       <Separator className="opacity-30" />
       <Gallery />
-      <Separator className="opacity-30" />
-      <About />
       <Footer />
     </main>
   )

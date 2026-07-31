@@ -71,7 +71,7 @@ export function About() {
       {/* Header */}
       <div className="mb-12">
         <p className="font-mono text-xs text-primary uppercase tracking-widest mb-2">
-          // 04 — ABOUT
+          // 02 — ABOUT
         </p>
         <h2 className="font-sans font-bold text-4xl sm:text-5xl text-foreground text-balance">
           Who&apos;s Behind the Bench?

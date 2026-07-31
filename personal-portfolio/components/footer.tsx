@@ -51,7 +51,7 @@ export function Footer() {
       {/* Contact CTA */}
       <div className="max-w-7xl mx-auto px-6 py-20 text-center">
         <p className="font-mono text-xs text-primary uppercase tracking-widest mb-4">
-          // 05 — CONTACT
+          // 06 — CONTACT
         </p>
         <h2 className="font-sans font-bold text-4xl sm:text-6xl text-foreground mb-6 text-balance">
           Want to connect?
