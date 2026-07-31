@@ -166,7 +166,7 @@ export function Projects() {
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-12">
         <div>
           <p className="font-mono text-xs text-primary uppercase tracking-widest mb-2">
-            // 03 — PROJECTS
+            // 01 — PROJECTS
           </p>
           <h2 className="font-sans font-bold text-4xl sm:text-5xl text-foreground text-balance">
             Things I&apos;ve Built
