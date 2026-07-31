@@ -1,9 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Badge } from '@/components/ui/badge'
-import { ExternalLink, GitBranch, ArrowRight } from 'lucide-react'
+import { ExternalLink, GitBranch, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react'
 
 type Category =
   | 'All'
@@ -41,6 +41,7 @@ interface Project {
   github?: string
   link?: string
   featured?: boolean
+  mobilePinned?: boolean
 }
 
 const projects: Project[] = [
@@ -65,6 +66,7 @@ const projects: Project[] = [
     image: '/images/software-1.png',
     status: 'Complete',
     featured: true,
+    mobilePinned: true,
   },
   {
     id: 3,
@@ -117,7 +119,8 @@ const projects: Project[] = [
     category: 'Web / UI',
     tags: ['React', 'Next.js', 'JavaScript', 'HTML/CSS', 'Freelance'],
     image: '/images/web-1.png',
-    status: 'Complete',
+    status: 'WIP',
+    mobilePinned: true,
   },
   {
     id: 8,
@@ -128,6 +131,7 @@ const projects: Project[] = [
     tags: ['FDM', 'CAD', 'Industrial', 'Prototyping', 'Hardware'],
     image: '/images/print-1.png',
     status: 'WIP',
+    mobilePinned: true,
   },
 ]
 
@@ -139,11 +143,21 @@ const statusColor: Record<string, string> = {
 
 export function Projects() {
   const [active, setActive] = useState<Category>('All')
+  const [showAll, setShowAll] = useState(false)
+
+  useEffect(() => {
+    setShowAll(false)
+  }, [active])
 
   const filtered =
     active === 'All' ? projects : projects.filter((p) => p.category === active)
   const featured = filtered.filter((p) => p.featured)
   const rest = filtered.filter((p) => !p.featured)
+
+  // Mobile: show pinned projects initially; fall back to all if none are pinned in this filter
+  const mobilePinned = filtered.filter((p) => p.mobilePinned)
+  const mobileVisible = mobilePinned.length > 0 && !showAll ? mobilePinned : filtered
+  const hasMore = mobilePinned.length > 0 && filtered.length > mobilePinned.length
 
   return (
     <section id="projects" className="py-24 px-6 max-w-7xl mx-auto">
@@ -169,7 +183,7 @@ export function Projects() {
           <button
             key={cat}
             onClick={() => setActive(cat)}
-            className={`font-mono text-xs px-4 py-2 rounded border transition-all uppercase tracking-wider ${
+            className={`font-mono text-xs px-4 py-2 rounded border transition-all uppercase tracking-wider whitespace-nowrap ${
               active === cat
                 ? 'bg-primary text-primary-foreground border-primary'
                 : 'bg-card text-muted-foreground border-border hover:border-primary hover:text-primary'
@@ -183,23 +197,44 @@ export function Projects() {
         ))}
       </div>
 
-      {/* Featured projects grid */}
-      {featured.length > 0 && (
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {featured.map((project) => (
-            <ProjectCard key={project.id} project={project} large />
-          ))}
-        </div>
-      )}
-
-      {/* Rest of projects */}
-      {rest.length > 0 && (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {rest.map((project) => (
+      {/* MOBILE: pinned projects + expand button */}
+      <div className="md:hidden">
+        <div className="grid grid-cols-1 gap-6 mb-4">
+          {mobileVisible.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
-      )}
+        {hasMore && (
+          <button
+            onClick={() => setShowAll((v) => !v)}
+            className="w-full flex items-center justify-center gap-2 font-mono text-xs text-muted-foreground border border-border rounded py-3 hover:border-primary hover:text-primary transition-colors uppercase tracking-wider"
+          >
+            {showAll ? (
+              <>Show Less <ChevronUp className="size-3.5" /></>
+            ) : (
+              <>See All {filtered.length} Projects <ChevronDown className="size-3.5" /></>
+            )}
+          </button>
+        )}
+      </div>
+
+      {/* DESKTOP: featured large grid + rest small grid */}
+      <div className="hidden md:block">
+        {featured.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            {featured.map((project) => (
+              <ProjectCard key={project.id} project={project} large />
+            ))}
+          </div>
+        )}
+        {rest.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {rest.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        )}
+      </div>
     </section>
   )
 }

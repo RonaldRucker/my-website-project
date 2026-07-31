@@ -7,7 +7,6 @@ const roles = [
   'Software Developer',
   'Entrepreneur',
   'Stock Analyst',
-  'Problem Solver',
   'Code Architect',
   'Fintech Builder',
 ]
