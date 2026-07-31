@@ -6,15 +6,15 @@ import { ArrowDown } from 'lucide-react'
 const roles = [
   'Software Developer',
   'Entrepreneur',
-  'Stock Analyst',
-  'Code Architect',
+  'Derivatives Trader',
+  'Aerospace Engineer',
   'Fintech Builder',
 ]
 
 const ticker = [
   'SOFTWARE DEV',
   '•',
-  'OPTIONS TRADING',
+  'DERIVATIVES TRADING',
   '•',
   'PCB DESIGN',
   '•',
