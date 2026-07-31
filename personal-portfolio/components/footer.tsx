@@ -62,11 +62,11 @@ export function Footer() {
           I&apos;m always up for a chat.
         </p>
         <a
-          href="mailto:ronnie@getthepit.com"
+          href="mailto:me@ronnierucker.com"
           className="inline-flex items-center gap-2 bg-primary text-primary-foreground font-mono font-bold text-sm px-8 py-4 rounded hover:bg-primary/90 transition-colors uppercase tracking-wider"
         >
           <Mail className="size-4" />
-          ronnie@getthepit.com
+          me@ronnierucker.com
         </a>
       </div>
 
