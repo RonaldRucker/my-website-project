@@ -90,10 +90,10 @@ export function Hero() {
 
         <h1 className="font-sans font-bold tracking-tight text-foreground leading-none mb-4">
           <span className="block text-5xl sm:text-7xl lg:text-9xl">
-            I BUILD
-          </span>
+            RONNIE
+          </span> 
           <span className="block text-5xl sm:text-7xl lg:text-9xl text-primary">
-            STUFF
+            RUCKER
           </span>
         </h1>
 
@@ -105,7 +105,7 @@ export function Hero() {
         </p>
 
         <p className="max-w-xl text-muted-foreground leading-relaxed mt-6 text-base">
-          Engineer, entrepreneur, and creative problem solver. Passionate about AI, financial derivatives and tinkering.
+          Designer, Builder and Entrepreneur. Integrating AI, finance and engineering.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-10">
@@ -129,8 +129,8 @@ export function Hero() {
           {[
             { value: '6+', label: 'Years Trading' },
             { value: '3+', label: 'Years Building' },
-            { value: 'VT', label: 'Virginia Tech' },
-            { value: '∞', label: 'Coffee Consumed' },
+            // { value: 'VT', label: 'Virginia Tech' },
+            // { value: '∞', label: 'Coffee Consumed' },
           ].map((s) => (
             <div key={s.label} className="text-center">
               <div className="font-mono font-bold text-2xl text-primary">{s.value}</div>
