@@ -164,7 +164,7 @@ export function Projects() {
       </div>
 
       {/* Filter tabs */}
-      <div className="flex flex-wrap gap-2 mb-10">
+      <div className="flex gap-2 mb-10 overflow-x-auto pb-2 -mx-6 px-6 no-scrollbar">
         {categories.map((cat) => (
           <button
             key={cat}

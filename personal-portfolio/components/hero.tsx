@@ -126,7 +126,7 @@ export function Hero() {
         </div>
 
         {/* Stats row */}
-        <div className="flex flex-wrap items-center justify-center gap-8 mt-16 pt-8 border-t border-border/50 w-full max-w-2xl">
+        <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mt-12 sm:mt-16 pt-8 border-t border-border/50 w-full max-w-2xl">
           {[
             { value: '6+', label: 'Years Trading' },
             { value: '3+', label: 'Years Building' },

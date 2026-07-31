@@ -9,7 +9,7 @@ const photos = [
     src: '/images/gallery-1.png',
     alt: 'Articulated 3D-printed dragon model',
     caption: 'Articulated Dragon — 47 joints, 0 regrets',
-    span: 'col-span-1 row-span-2',
+    span: 'sm:col-span-1 sm:row-span-2',
   },
   {
     src: '/images/gallery-2.png',
@@ -27,7 +27,7 @@ const photos = [
     src: '/images/gallery-4.png',
     alt: '3D printer mid-print',
     caption: '3AM Print Session — Worth it',
-    span: 'col-span-2',
+    span: 'sm:col-span-2',
   },
   {
     src: '/images/gallery-5.png',
@@ -77,7 +77,7 @@ export function Gallery() {
       </div>
 
       {/* Masonry-ish grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[200px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 auto-rows-[200px]">
         {photos.map((photo, i) => (
           <button
             key={i}
