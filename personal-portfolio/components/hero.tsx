@@ -127,8 +127,8 @@ export function Hero() {
         {/* Stats row */}
         <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-8 mt-12 sm:mt-16 pt-8 border-t border-border/50 w-full max-w-2xl">
           {[
-            { value: '6+', label: 'Years Trading' },
-            { value: '3+', label: 'Years Building' },
+            { value: '7+', label: 'Years Trading' },
+            { value: '10+', label: 'Years Building' },
             // { value: 'VT', label: 'Virginia Tech' },
             // { value: '∞', label: 'Coffee Consumed' },
           ].map((s) => (
