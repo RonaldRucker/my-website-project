@@ -70,10 +70,10 @@ export function Gallery() {
             The Build Wall
           </h2>
         </div>
-        <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
+        {/* <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
           A visual diary of finished builds, glorious failures, and everything
           in between.
-        </p>
+        </p> */}
       </div>
 
       {/* Masonry-ish grid */}

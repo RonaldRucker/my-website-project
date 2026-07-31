@@ -54,11 +54,11 @@ export function Footer() {
           // 05 — CONTACT
         </p>
         <h2 className="font-sans font-bold text-4xl sm:text-6xl text-foreground mb-6 text-balance">
-          Got a Cool Project?
+          Want to connect?
         </h2>
         <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed mb-10">
           Whether you want to collaborate on a build, have a question about
-          one of my projects, or just want to talk shop about 3D printers —
+          one of my projects, or just want to talk shop about AI —
           I&apos;m always up for a chat.
         </p>
         <a
@@ -115,10 +115,10 @@ export function Footer() {
         <div className="border-t border-border px-6 py-4 max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="font-mono text-xs text-muted-foreground">
             © 2026 Ronnie Rucker — Built with{' '}
-            <span className="text-primary">too much coffee</span> and Next.js
+            <span className="text-primary">love</span> and Next.js
           </p>
           <p className="font-mono text-xs text-muted-foreground">
-            &ldquo;If it works, it works.&rdquo;
+            &ldquo;If it works, reconsider.&rdquo;
           </p>
         </div>
       </div>

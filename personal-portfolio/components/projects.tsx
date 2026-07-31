@@ -54,7 +54,6 @@ const projects: Project[] = [
     tags: ['Python', 'AI/ML', 'Supabase', 'React', 'Fintech'],
     image: '/images/software-1.png',
     status: 'WIP',
-    featured: true,
   },
   {
     id: 2,
@@ -77,7 +76,6 @@ const projects: Project[] = [
     tags: ['MATLAB', 'PCB', 'CNC', 'Drones', 'Hardware'],
     image: '/images/electronics-1.png',
     status: 'Complete',
-    featured: true,
   },
   {
     id: 4,
@@ -89,6 +87,7 @@ const projects: Project[] = [
     image: '/images/electronics-1.png',
     status: 'Complete',
     featured: true,
+    mobilePinned: true,
   },
   {
     id: 5,
@@ -120,6 +119,7 @@ const projects: Project[] = [
     tags: ['React', 'Next.js', 'JavaScript', 'HTML/CSS', 'Freelance'],
     image: '/images/web-1.png',
     status: 'WIP',
+    featured: true,
     mobilePinned: true,
   },
   {
@@ -131,6 +131,7 @@ const projects: Project[] = [
     tags: ['FDM', 'CAD', 'Industrial', 'Prototyping', 'Hardware'],
     image: '/images/print-1.png',
     status: 'WIP',
+    featured: true,
     mobilePinned: true,
   },
 ]
@@ -171,10 +172,10 @@ export function Projects() {
             Things I&apos;ve Built
           </h2>
         </div>
-        <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
+        {/* <p className="text-muted-foreground max-w-xs text-sm leading-relaxed">
           A collection of projects from the bench, the screen, and everything in
           between.
-        </p>
+        </p> */}
       </div>
 
       {/* Filter tabs */}
