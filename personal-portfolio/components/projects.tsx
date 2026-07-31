@@ -218,7 +218,7 @@ export function Projects() {
         )}
       </div>
 
-      {/* DESKTOP: featured large grid + rest small grid */}
+      {/* DESKTOP: featured large grid + expandable rest */}
       <div className="hidden md:block">
         {featured.length > 0 && (
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -227,12 +227,24 @@ export function Projects() {
             ))}
           </div>
         )}
-        {rest.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {showAll && rest.length > 0 && (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
             {rest.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </div>
+        )}
+        {rest.length > 0 && (
+          <button
+            onClick={() => setShowAll((v) => !v)}
+            className="w-full flex items-center justify-center gap-2 font-mono text-xs text-muted-foreground border border-border rounded py-3 hover:border-primary hover:text-primary transition-colors uppercase tracking-wider"
+          >
+            {showAll ? (
+              <>Show Less <ChevronUp className="size-3.5" /></>
+            ) : (
+              <>See All {filtered.length} Projects <ChevronDown className="size-3.5" /></>
+            )}
+          </button>
         )}
       </div>
     </section>
